@@ -1,9 +1,9 @@
 const socket = io();
-var name;
+var userName;
 
 do{
-     name = prompt("Please enter your name:");
-}while(name == null || name == "" );
+    userName = prompt("Please enter your name:");
+}while(userName == null || userName == "" );
 
 let messagearea = document.querySelector(".message__area");
 let textarea = document.querySelector("#textarea");
@@ -18,7 +18,7 @@ textarea.addEventListener('keyup', (e) => {
 
 function sendMessage(message){
     let msg = {
-            user: name,
+            user: userName,
             message: message
     }
 //Appending to Html
